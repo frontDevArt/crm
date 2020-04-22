@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { CategoriesService } from 'src/app/shared/services/categories.service';
-import { switchMap } from 'rxjs/operators';
-import { of } from 'rxjs';
-import { MaterialService } from 'src/app/shared/classes/material.service';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {ActivatedRoute, Params, Router} from '@angular/router';
+import {FormGroup, FormControl, Validators} from '@angular/forms';
+import {CategoriesService} from 'src/app/shared/services/categories.service';
+import {switchMap} from 'rxjs/operators';
+import {of} from 'rxjs';
+import {MaterialService} from 'src/app/shared/classes/material.service';
+import {Category} from "../../shared/interfaces";
 
 @Component({
   selector: 'app-categories-form',
@@ -12,12 +13,17 @@ import { MaterialService } from 'src/app/shared/classes/material.service';
   styleUrls: ['./categories-form.component.css']
 })
 export class CategoriesFormComponent implements OnInit {
-
+  @ViewChild('input') inputRef: ElementRef
   form: FormGroup
+  image: File
+  imagePreview: string | ArrayBuffer = ''
   isNew = true
+  category: Category
 
   constructor(private route: ActivatedRoute,
-              private categoriesService: CategoriesService) { }
+              private router: Router,
+              private categoriesService: CategoriesService) {
+  }
 
   ngOnInit(): void {
 
@@ -31,7 +37,7 @@ export class CategoriesFormComponent implements OnInit {
       .pipe(
         switchMap(
           (params: Params) => {
-            if(params['id']){
+            if (params['id']) {
               this.isNew = false
               return this.categoriesService.getById(params.id)
             }
@@ -41,22 +47,72 @@ export class CategoriesFormComponent implements OnInit {
           }
         )
       )
-        .subscribe(
-          (category) => {
-            if(category){
-              this.form.patchValue({
-                name: category.name
-              })
-              MaterialService.updateTextInputs()
-            }
-            this.form.enable()
-          },
-          (error) => MaterialService.toast(error.error.message)
-        )
+      .subscribe(
+        (category: Category) => {
+          if (category) {
+            this.category = category
+            this.form.patchValue({
+              name: category.name
+            })
+            this.imagePreview = category.imageSrc
+            MaterialService.updateTextInputs()
+          }
+          this.form.enable()
+        },
+        (error) => MaterialService.toast(error.error.message)
+      )
   }
 
   onSubmit() {
+    let obs$
+    this.form.disable()
 
+    if (this.isNew) {
+      obs$ = this.categoriesService.create(this.form.value.name, this.image)
+    } else {
+      obs$ = this.categoriesService.update(this.category._id, this.form.value.name, this.image)
+    }
+
+    obs$.subscribe(
+      category => {
+        this.category = category
+        MaterialService.toast('Изминение сохранены')
+        this.form.enable()
+      },
+      error => {
+        MaterialService.toast(error.error.message)
+        this.form.enable()
+      }
+    )
   }
 
+  triggerClick() {
+    this.inputRef.nativeElement.click()
+  }
+
+  onFileUpload(event: any) {
+    const file = event.target.files[0]
+    this.image = file
+
+    const reader = new FileReader()
+
+    reader.onload = () => {
+      this.imagePreview = reader.result
+    }
+    reader.readAsDataURL(file)
+  }
+
+  deleteCatgory() {
+    const desition = window.confirm(`Вы уверены, что хотите удалить категорию ${this.category.name}`)
+    if (desition) {
+      this.categoriesService.delete(this.category._id)
+        .subscribe(
+          (response) => MaterialService.toast(response.message),
+          (error) => MaterialService.toast(error.error.message),
+          () => {
+            this.router.navigate(['/categories'])
+          }
+        )
+    }
+  }
 }
