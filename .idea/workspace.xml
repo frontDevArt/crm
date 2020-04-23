@@ -1,27 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e8e57f4-2d17-4b03-b2ec-5f67995fd2c3" name="Default" comment="category positions compleate">
-      <change afterPath="$PROJECT_DIR$/client/src/app/shared/services/positions.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/22042020-150304_024-cake.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/22042020-150325_967-cake2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/22042020-150924_735-coffe.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/22042020-151246_856-cake.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/22042020-213553_752-coffe.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/22042020-214048_120-cake2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/22042020-214741_006-coffe.jpeg" afterDir="false" />
+    <list default="true" id="3e8e57f4-2d17-4b03-b2ec-5f67995fd2c3" name="Default" comment="orders compleated">
+      <change afterPath="$PROJECT_DIR$/client/src/app/order-page/order-categories/order-categories.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/order-page/order-categories/order-categories.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/order-page/order-categories/order-categories.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/order-page/order-positions/order-positions.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/order-page/order-positions/order-positions.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/order-page/order-positions/order-positions.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/order-page/order.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/app/shared/services/orders.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/categories-page/categories-form/categories-form.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/categories-page/categories-form/categories-form.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/categories-page/categories-form/categories-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/categories-page/categories-form/categories-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/categories-page/categories-form/categories-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/categories-page/categories-form/categories-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/categories-page/categories-form/positions-form/positions-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/categories-page/categories-form/positions-form/positions-form.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/categories-page/categories-form/positions-form/positions-form.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/categories-page/categories-form/positions-form/positions-form.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/login-page/login-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/login-page/login-page.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/shared/classes/material.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/classes/material.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/order-page/order-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/order-page/order-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/order-page/order-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/order-page/order-page.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/shared/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/interfaces.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/app/shared/services/categories.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/shared/services/categories.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/keys.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/keys.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/position.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/position.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +66,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
@@ -59,29 +86,65 @@
       <updated>1587453614935</updated>
       <workItem from="1587453626493" duration="756000" />
       <workItem from="1587541027714" duration="3009000" />
-      <workItem from="1587550671210" duration="15144000" />
+      <workItem from="1587550671210" duration="16156000" />
+      <workItem from="1587622801020" duration="11032000" />
     </task>
+    <task id="LOCAL-00001" summary="category positions compleate">
+      <created>1587578494501</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587578494501</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="category positions compleate" />
-    <option name="LAST_COMMIT_MESSAGE" value="category positions compleate" />
+    <MESSAGE value="orders compleated" />
+    <option name="LAST_COMMIT_MESSAGE" value="orders compleated" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="307" y="23" key="CommitChangelistDialog2" timestamp="1587578327544">
+    <state x="307" y="0" key="CommitChangelistDialog2" timestamp="1587645136431">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="307" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1587645136431" />
+    <state x="307" y="23" key="CommitChangelistDialog2/0.23.1440.793@0.23.1440.793" timestamp="1587578494127" />
+    <state x="514" y="130" key="RollbackChangesDialog" timestamp="1587578458610">
       <screen x="0" y="23" width="1440" height="793" />
     </state>
-    <state x="307" y="23" key="CommitChangelistDialog2/0.23.1440.793@0.23.1440.793" timestamp="1587578327544" />
+    <state x="514" y="130" key="RollbackChangesDialog/0.23.1440.793@0.23.1440.793" timestamp="1587578458610" />
     <state x="229" y="59" key="SettingsEditor" timestamp="1587554731382">
       <screen x="0" y="23" width="1440" height="793" />
     </state>
     <state x="229" y="59" key="SettingsEditor/0.23.1440.793@0.23.1440.793" timestamp="1587554731382" />
-    <state x="420" y="56" width="600" height="729" key="find.popup" timestamp="1587559430336">
+    <state x="320" y="160" key="Vcs.Push.Dialog.v2" timestamp="1587578690843">
       <screen x="0" y="23" width="1440" height="793" />
     </state>
+    <state x="320" y="160" key="Vcs.Push.Dialog.v2/0.23.1440.793@0.23.1440.793" timestamp="1587578690843" />
+    <state x="420" y="37" width="625" height="828" key="find.popup" timestamp="1587636045145">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="420" y="37" width="625" height="828" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1587636045145" />
     <state x="420" y="56" width="600" height="729" key="find.popup/0.23.1440.793@0.23.1440.793" timestamp="1587559430336" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1587628490198">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1587628490198" />
   </component>
 </project>
