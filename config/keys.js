@@ -1,4 +1,5 @@
-module.exports = {
-  mongoURI: 'mongodb+srv://frontart:Giftfifa000@cluster0-xf3vt.mongodb.net/crm',
-  jwt: 'dev-jwt'
+if (process.env.NODE_ENV === 'production') {
+  module.exports = require('./keys.prod')
+} else {
+  module.exports = require('./keys.dev')
 }
