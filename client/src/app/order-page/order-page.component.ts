@@ -40,7 +40,9 @@ export class OrderPageComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnDestroy(): void {
     this.modal.destroy()
-    this.oSub.unsubscribe()
+    if(this.oSub){
+      this.oSub.unsubscribe()
+    }
   }
 
   open() {
@@ -62,7 +64,7 @@ export class OrderPageComponent implements OnInit, OnDestroy, AfterViewInit {
     this.oSub = this.ordersService.create(order)
       .subscribe(
         newOrder => {
-          MaterialService.toast(`Заказ ${newOrder.order} был добавлен`)
+          MaterialService.toast(`Заказ № ${newOrder.order} был добавлен`)
           this.order.clear()
         },
         error => MaterialService.toast(error.error.message),
